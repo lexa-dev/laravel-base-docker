@@ -32,12 +32,12 @@ services:
         volumes: 
             - ./mysql:/var/lib/mysql
         environment: 
-            MYSQL_DATABASE: laravel_docker
-            MYSQL_USER: user
-            MYSQL_PASSWORD: user
-            MYSQL_ROOT_PASSWORD: root
-            SERVICE_TAGS: dev
-            SERVICE_NAME: mysql
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_USER: ${DB_USER}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+            SERVICE_TAGS: ${MYSQL_SERVICE_TAGS}
+            SERVICE_NAME: ${MYSQL_SERVICE_NAME}
         networks: 
             - laravel
 
